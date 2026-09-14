@@ -46,8 +46,6 @@ Para cada recorrido registrado, el sistema calcula automáticamente el **tiempo 
 
 El sistema utiliza el patrón **Modelo-Vista-Controlador (MVC)** para separar las responsabilidades de la aplicación.
 
-<div align="center">
-
 ```
 
 </div>
