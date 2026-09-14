@@ -11,7 +11,6 @@
 <div align="center">
   <img src="https://img.shields.io/badge/Plataforma-Java-orange?style=flat-square" alt="Java"/>
   <img src="https://img.shields.io/badge/Arquitectura-MVC-2196F3?style=flat-square" alt="MVC"/>
-  <img src="https://img.shields.io/badge/Paradigma-POO-9C27B0?style=flat-square" alt="POO"/>
   <img src="https://img.shields.io/badge/Interfaz-Consola-4CAF50?style=flat-square" alt="Consola"/>
 </div>
 
@@ -45,42 +44,12 @@ Para cada recorrido registrado, el sistema calcula automáticamente el **tiempo 
 
 ---
 
-## 🎯 Objetivo General
-
-Desarrollar una aplicación en Java basada en los principios de **Programación Orientada a Objetos** y el patrón arquitectónico **MVC**, que permita gestionar conductores, vehículos, rutas y recorridos, realizando automáticamente los cálculos asociados al transporte.
-
----
-
 ## 🏗️ Arquitectura del Sistema
 
 El sistema utiliza el patrón **Modelo-Vista-Controlador (MVC)** para separar las responsabilidades de la aplicación.
 
 <div align="center">
 
-```text
-                 ┌─────────────────────┐
-                 │        VISTA        │
-                 │    VistaPrinci      │
-                 └──────────┬──────────┘
-                            │
-                            ▼
-                 ┌─────────────────────┐
-                 │    CONTROLADORES    │
-                 │                     │
-                 │  CtlPrincipal       │
-                 │  CtldConductor      │
-                 │  CtldVehiculo       │
-                 │  CtldRuta           │
-                 └──────────┬──────────┘
-                            │
-                            ▼
-                 ┌─────────────────────┐
-                 │       MODELO        │
-                 │                     │
-                 │  Conductor          │
-                 │  Vehiculo           │
-                 │  Ruta               │
-                 └─────────────────────┘
 ```
 
 </div>
@@ -124,6 +93,11 @@ El sistema cuenta con:
 
 Los controladores pueden utilizar la Vista y el Modelo, manteniendo separadas sus responsabilidades.
 
+### Main
+
+- `JALogistica`
+
+Es el controlador que controla a todos, el instancia y manda a correr al codigo 
 ---
 
 ## 🤖 Componentes del Sistema
@@ -207,12 +181,11 @@ Gestiona las rutas y los recorridos realizados.
 - Seleccionar un conductor.
 - Seleccionar un vehículo.
 - Seleccionar una ruta.
-- Registrar el recorrido.
-- Calcular el tiempo del recorrido.
-- Calcular el costo del recorrido.
-- Mostrar los recorridos registrados.
+- Registrar el recorrido .
+- Calcular el tiempo del recorrido de cada ruta.
+- Calcular el costo del recorrido de cada ruta.
+- Mostrar los recorridos registrados de cada ruta.
 
-No se utiliza una clase independiente `Recorrido`. La gestión de los recorridos se realiza directamente desde `CtldRuta`.
 
 ---
 
@@ -352,45 +325,6 @@ Si no existen conductores, vehículos o rutas registrados, el sistema informa al
 
 ---
 
-## 📊 Información Gestionada
-
-El sistema mantiene listas independientes para:
-
-```text
-Lista de Conductores
-Lista de Vehículos
-Lista de Rutas
-```
-
-Los recorridos se gestionan mediante listas relacionadas dentro de `CtldRuta`:
-
-```text
-Conductores de recorridos
-Vehículos de recorridos
-Rutas de recorridos
-Tiempos
-Costos
-```
-
-Cada posición de estas listas representa un recorrido determinado.
-
----
-
-## 🏛️ Principios de Programación Orientada a Objetos
-
-El proyecto aplica diferentes conceptos de POO:
-
-| Concepto | Aplicación |
-| :--- | :--- |
-| **Clases** | `Conductor`, `Vehiculo`, `Ruta`, controladores y Vista |
-| **Objetos** | Instancias de conductores, vehículos y rutas |
-| **Encapsulamiento** | Atributos `private` con métodos `get` y `set` |
-| **Abstracción** | Representación de los elementos principales de la logística |
-| **Responsabilidad** | Cada clase tiene una función específica |
-| **Modularidad** | El sistema se divide en Modelo, Vista y Controlador |
-
----
-
 ## 🗺️ Flujo General del Sistema
 
 <div align="center">
@@ -442,7 +376,7 @@ El proyecto aplica diferentes conceptos de POO:
 | Ítem | Detalle |
 | :---: | :--- |
 | **Lenguaje** | Java |
-| **Paradigma** | Programación Orientada a Objetos |
+| **Paradigma** | Programación Avanzada |
 | **Arquitectura** | Modelo-Vista-Controlador (MVC) |
 | **Interfaz** | Consola |
 | **Entrada de datos** | `Scanner` |
@@ -485,14 +419,15 @@ JALogistica/
 
 ## 🚀 Cómo Ejecutar el Proyecto
 
-1. Abrir el proyecto **JALogistica** en NetBeans.
-2. Verificar que los paquetes `modelo`, `vista` y `controlador` estén correctamente organizados.
-3. Ejecutar la clase `JALogistica`.
-4. El programa iniciará el `CtlPrincipal`.
-5. Utilizar el menú principal para seleccionar las diferentes opciones.
-6. Registrar los conductores, vehículos y rutas necesarios.
-7. Registrar los recorridos seleccionando los elementos disponibles.
-8. Consultar los recorridos y los cálculos realizados.
+1. Abrir el proyecto **JALogistica** en NetBeans IDE 28.
+2. Use JDK 25 mínimo
+3. Verificar que los paquetes `modelo`, `vista` y `controlador` estén correctamente organizados.
+4. Ejecutar la clase `JALogistica`.
+5. El programa iniciará el `CtlPrincipal`.
+6. Utilizar el menú principal para seleccionar las diferentes opciones.
+7. Registrar los conductores, vehículos y rutas necesarios.
+8. Registrar los recorridos seleccionando los elementos disponibles.
+9. Consultar los recorridos y los cálculos realizados.
 
 ---
 
@@ -511,44 +446,10 @@ Durante la ejecución del programa se puede consultar:
 
 ---
 
-## 📐 Diseño MVC
-
-<div align="center">
-
-```text
-┌──────────────────────────────────────────────┐
-│                    MVC                       │
-├──────────────────────────────────────────────┤
-│                                              │
-│  MODELO                                      │
-│  ├── Conductor                               │
-│  ├── Vehiculo                                │
-│  └── Ruta                                    │
-│                                              │
-│              ▲                               │
-│              │                               │
-│              │                               │
-│  CONTROLADOR │                               │
-│  ├── CtlPrincipal                            │
-│  ├── CtldConductor                           │
-│  ├── CtldVehiculo                            │
-│  └── CtldRuta                                │
-│              ▲                               │
-│              │                               │
-│              │                               │
-│  VISTA                                       │
-│  └── VistaPrinci                             │
-│                                              │
-└──────────────────────────────────────────────┘
-```
-
-</div>
-
----
-
 <h2>1. Diagrama de Clases</h2>
 <p align="center">
   <img src="docs/diagramas/Estados.jpg" width="800">
 </p>
 
 ---
+**Universidad Distrital Francisco José De Caldas** Programación Avanzada · Septiembre 2026
