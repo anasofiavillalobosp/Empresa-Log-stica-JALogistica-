@@ -8,12 +8,7 @@
 
 </div>
 
-<div align="center">
-  <img src="https://img.shields.io/badge/Plataforma-NetLogo-4CAF50?style=flat-square" alt="NetLogo"/>
-  <img src="https://img.shields.io/badge/Paradigma-ABM%20%2F%20MOBA-2196F3?style=flat-square" alt="ABM"/>
-  <img src="https://img.shields.io/badge/Agentes-5%20tipos-FF9800?style=flat-square" alt="Agentes"/>
-  <img src="https://img.shields.io/badge/Calidad%20inicial-95%25-brightgreen?style=flat-square" alt="Calidad"/>
-  <img src="https://img.shields.io/badge/Tiempo%20límite-32%20horas-red?style=flat-square" alt="Tiempo"/>
+<div align="center"> <img src="https://img.shields.io/badge/Plataforma-Java-orange?style=flat-square" alt="Java"/> <img src="https://img.shields.io/badge/Arquitectura-MVC-2196F3?style=flat-square" alt="MVC"/> <img src="https://img.shields.io/badge/Interfaz-Consola-4CAF50?style=flat-square" alt="Consola"/> 
 </div>
 
 ---
@@ -28,9 +23,11 @@
 
 ## 📌 Descripción del Proyecto
 
-Este proyecto implementa una **simulación multi-agente (MOBA)** del proceso de transporte y distribución de leche dentro de la cadena de suministro de **AMUL**, una de las cooperativas lácteas más grandes del mundo, con sede en India.
+Este proyecto implementa un sistema de gestión logística de transporte desarrollado en Java, utilizando los principios de la **arquitectura Modelo-Vista-Controlador (MVC)**.
 
-La simulación modela el recorrido del producto desde las zonas rurales de producción (**Punjab**) hasta las tiendas finales de consumo (**Noida, B y C**), pasando por un distribuidor principal (**Delhi**). En tiempo real se monitorizan variables críticas como **calidad del producto**, **temperatura** y **tiempos de entrega**, permitiendo identificar cuellos de botella y puntos de degradación en la cadena de frío.
+El sistema permite registrar y administrar conductores, vehículos y rutas, además de gestionar los recorridos realizados mediante la combinación de estos elementos.
+
+Para cada recorrido registrado, el sistema calcula automáticamente el tiempo estimado de viaje a partir de los kilómetros de la ruta y la velocidad del vehículo, así como el costo del recorrido utilizando la tarifa por kilómetro del vehículo.
 
 ---
 
@@ -38,15 +35,9 @@ La simulación modela el recorrido del producto desde las zonas rurales de produ
 
 <div align="center">
 
-> **¿Cómo optimizar el proceso de transporte de leche en la cadena de suministro de AMUL para minimizar los tiempos de transporte y evitar la pérdida de calidad (cadena de frío)?**
+> **¿Cómo desarrollar un sistema de gestión logística que permita administrar conductores, vehículos y rutas, facilitando el registro de recorridos y el cálculo automático de tiempos y costos de transporte?**
 
 </div>
-
----
-
-## 🎯 Objetivo General
-
-Diseñar y ejecutar una simulación basada en agentes que permita identificar cuellos de botella logísticos, medir el impacto de fallos en la cadena de frío, y proponer estrategias de optimización para garantizar que el producto llegue a su destino final dentro de los estándares de calidad y tiempo establecidos.
 
 ---
 
@@ -243,22 +234,11 @@ Representa la unidad de leche en tránsito. Es el agente central de la simulaci�
 ## 📁 Estructura del Proyecto
 
 ```text
-AMUL_MOBA/
+JALogistica/
 │
-├── README.md
-├── docs/
-│   ├── AMUL_MOBA.docx
-│   └── diagramas/
-│       ├── red_geografica.png
-│       ├── diagrama_secuencia.png
-│       ├── modelos_estado.png
-│       └── diagrama_global.png
-│
-├── simulacion/
-│   └── AMUL_MOBA.nlogo
-│
-└── resultados/
-    └── metricas.csv
+├── src/
+│    │
+│    ├── controlador/ │ │ ├── CtlPrincipal.java │ │ ├── CtldConductor.java │ │ ├── CtldVehiculo.java │ │ └── CtldRuta.java │ │ │ ├── modelo/ │ │ ├── Conductor.java │ │ ├── Vehiculo.java │ │ └── Ruta.java │ │ │ ├── vista/ │ │ └── VistaPrinci.java │ │ │ └── JALogistica.java │ ├── README.md │ └── docs/ └── diagramas/ └── ...
 
 ```
 
@@ -266,13 +246,14 @@ AMUL_MOBA/
 
 ## 🚀 Cómo Ejecutar la Simulación
 
-1. Descargar e instalar **[NetLogo](https://ccl.northwestern.edu/netlogo/)**.
-2. Abrir el archivo `simulacion/AMUL_MOBA.nlogo`.
-3. Crear los sliders en la interfaz para los parámetros configurables listados arriba (o usar los valores por defecto del código).
-4. Añadir monitores para las variables globales: `rechazados`, `fallidos`, `exitosos`, `tiempo-global`, `count-lotes`.
-5. Presionar **Setup** para inicializar el entorno y los agentes.
-6. Presionar **Go** (en modo *forever*) para correr la simulación.
-7. Observar en tiempo real la etiqueta de calidad sobre cada lote y los contadores en los monitores.
+Abrir el proyecto JALogistica en NetBeans.
+Verificar que los paquetes modelo, vista y controlador estén correctamente organizados.
+Ejecutar la clase JALogistica.
+El programa iniciará el CtlPrincipal.
+Utilizar el menú principal para seleccionar las diferentes opciones.
+Registrar los conductores, vehículos y rutas necesarios.
+Registrar los recorridos seleccionando los elementos disponibles.
+Consultar los recorridos y los cálculos realizados.
 
 ---
 
