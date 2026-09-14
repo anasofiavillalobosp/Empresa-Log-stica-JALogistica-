@@ -317,7 +317,7 @@ Si no existen conductores, vehículos o rutas registrados, el sistema informa al
 ---
 
 ## 🗺️ Flujo General del Sistema
-
+<div align="center">
 ```text
              INICIO
                 │
@@ -354,6 +354,7 @@ Si no existen conductores, vehículos o rutas registrados, el sistema informa al
                 │
                 ▼
                FIN
+</div>
 ```
 
 ---
