@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="Imagenes/Logisticajpg.jpg" width="50%" style="max-width: 800px;" alt="JALogistica Header"/>
+<img src="Imagenes/Logisticajpg.jpg" width="80%" style="max-width: 800px;" alt="JALogistica Header"/>
 
 ## Empresa-Logistica-JALogistica-
 
