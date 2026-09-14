@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="resources/imagenes/JALogistica.png" width="100%" style="max-width: 800px;" alt="JA Logistica Header"/>
+<img src="resources/Imagenes/Logisticajpg..jpg" width="100%" style="max-width: 800px;" alt="JA Logistica Header"/>
 
 ## Empresa-Logistica-JALogistica-
 
@@ -77,7 +77,7 @@ Los controladores reciben las acciones del usuario y coordinan la interacción e
 
 El sistema cuenta con:
 
-- `CtlPrincipal`
+- `CtldPrinLogistica`
 - `CtldConductor`
 - `CtldVehiculo`
 - `CtldRuta`
@@ -180,7 +180,7 @@ Gestiona las rutas y los recorridos realizados.
 
 ---
 
-### 7. 🎮 Controlador `CtlPrincipal`
+### 7. 🎮 Controlador `CtldPrinLogistica`
 
 Es el controlador encargado de coordinar el funcionamiento general del sistema.
 
