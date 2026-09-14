@@ -40,8 +40,6 @@ Para cada recorrido registrado, el sistema calcula automáticamente el **tiempo 
 
 > **¿Cómo desarrollar un sistema de gestión logística que permita administrar conductores, vehículos y rutas, facilitando el registro de recorridos y el cálculo automático de tiempos y costos de transporte?**
 
-</div>
-
 ---
 
 ## 🏗️ Arquitectura del Sistema
