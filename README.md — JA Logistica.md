@@ -434,7 +434,7 @@ Durante la ejecución del programa se puede consultar:
 
 <h2>1. Diagrama de Clases</h2>
 <p align="center">
-  <img src="docs/diagramas/Estados.jpg" width="800">
+  <img src="Diagrama-De-Clases/DIAGRAMA DE CLASES.png" width="800">
 </p>
 
 ---
