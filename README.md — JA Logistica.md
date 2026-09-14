@@ -36,8 +36,6 @@ Para cada recorrido registrado, el sistema calcula automáticamente el **tiempo 
 
 ## ❓ Pregunta de Investigación
 
-<div align="center">
-
 > **¿Cómo desarrollar un sistema de gestión logística que permita administrar conductores, vehículos y rutas, facilitando el registro de recorridos y el cálculo automático de tiempos y costos de transporte?**
 
 ---
@@ -320,8 +318,6 @@ Si no existen conductores, vehículos o rutas registrados, el sistema informa al
 ---
 
 ## 🗺️ Flujo General del Sistema
-
-<div align="center">
 
 ```text
              INICIO
