@@ -48,8 +48,6 @@ El sistema utiliza el patrón **Modelo-Vista-Controlador (MVC)** para separar la
 
 ```
 
-</div>
-
 ### Modelo
 
 Contiene las clases que representan la información del sistema:
@@ -362,8 +360,6 @@ Si no existen conductores, vehículos o rutas registrados, el sistema informa al
                 ▼
                FIN
 ```
-
-</div>
 
 ---
 
